@@ -1,0 +1,32 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import glob
+import os
+import sys
+import math
+import keras
+from keras.models import Sequential
+from keras.layers import LSTM,Dropout,Dense
+from keras.layers import *
+#from sklearn.preprocessing import MinMaxScale
+#from sklearn.metrics import mean_squared_error
+#from sklearn.metrics import mean_absolute_error
+#from sklearn.model_selection import train_test_split
+#from keras.callbacks import EarlyStopping
+
+path = "../tickdata/*.csv"
+all_files = glob.glob(path)
+df_list = []
+
+#use_cols = [3, 4, 5, 6, 7, 48, 49, 50, 51, 52, 53, 54, 55]
+
+for filename in all_files:
+    df = pd.read_csv(filename)
+    df_list.append(df)
+    print(df)
+    break
+    
+
+#input_file = sys.argv[1]
+#output_file = sys.argv[2]
