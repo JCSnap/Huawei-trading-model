@@ -1,6 +1,10 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*
 
+# create a simple traading model that reads from a csv file and outputs a csv file
+# after reading every line, the model will update the average price of each stock 
+# and place an order if the price is lower than the average price by a perdetermined threshold 
+
 import pandas as pd
 import sys
 
